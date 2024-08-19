@@ -1,0 +1,152 @@
+.team {
+    height: auto; 
+    flex-wrap: wrap;
+}
+
+.team,
+.member {
+    text-align: center;
+}
+
+
+.title,
+.guide {
+    font-size: 24px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.team .members {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.team .photo img {
+    display: block;
+    width: 150px; 
+    height: 150px; 
+    margin: 0 auto;
+    border-radius: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team .member:hover .photo img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.team .name,
+.rollno,
+.profession,
+.guidecolumn {
+    color: #3498db;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+ 
+  .row1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5em 1em;
+    text-align: center; 
+  }
+  
+  .column {
+    width: 50%;
+    padding: 10px 10px;
+  }
+
+
+  .card {
+    box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+    padding: 1em 5px;
+    border-radius: 0.6em;
+    color: #006db6;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #cadbeb;
+
+  }
+
+  .card .img-container {
+    width:150px;
+    height: 150px;
+    background-color: transparent;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+  }
+
+  .card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .card h3 {
+    font-weight: 500;
+  }
+
+  .card p {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0.5em 0 2em 0;
+    letter-spacing: 2px;
+  }
+
+  .icons {
+    width: 50%;
+    min-width: 180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+  }
+
+  .card:hover {
+    background: #3498db;
+    color: #ffffff;
+  }
+
+  .card:hover .img-container {
+    transform: scale(1.15);
+  }
+
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 1em 2em;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em;
+    }
+    .card {
+      padding: 1em 1em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 25%;
+      padding: 0 1em;
+    }
+  }

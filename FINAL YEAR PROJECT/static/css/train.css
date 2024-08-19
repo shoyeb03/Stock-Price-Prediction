@@ -1,0 +1,72 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+input[type="file"] {
+    display: none;
+    padding: 20px;
+}
+
+label {
+    background-color: #3498db;
+    color: #fff;
+    padding:  20px;
+    width: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+label:hover {
+    background-color: #2980b9;
+}
+
+input[type="submit"], .uploadcsv{
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px  20px;
+    border: none;
+    width: 120px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"] , .uploadcsv:hover {
+    background-color: #3498db;
+}
+
+.fileupload {
+    color: #3498db;
+    text-align: center;
+    /* border: 2px solid #3498db ; */
+    font-size: larger;
+    padding: 20px;
+    margin-top: 20px; 
+    margin-bottom: 30px; 
+
+
+}
+
+.trainbutton{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+

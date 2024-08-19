@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia2JSZmioCiffRK5rQm-OF-jQ9TQoVj-W1CGp_4Pr31SmXJt_YwqYHW1-3hUIXrhEXRS1TR_AnKviy5MHDCQz7b4CmUmHFTOoHwnqPXwu8wAcwibaJCXx8raEkPM055Mqz00puXIpjFEo-OD8CJ-x5liaYrjgnp3BvQm99bHb2kmnybzVZdQ9OYHW5zXA/s320/stock.png"  sizes="16x16">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header_footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact_us.css') }}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <h1 class="title">STOCK   PRICE   PREDICTION</h1>
+
+    <div>
+        <nav>
+            <ul>    
+                <a href="/">Home</a>
+                <a href="/train">Training</a>
+                <a href="/predict">Predictions</a>
+                <a href="/team">Team</a>
+                <a href="/contact_us">Contact Us</a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+        <div class="main">
+            <div class="container">
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <h2>Contact Us</h2>
+
+                    <input type="hidden" name="access_key" value="f0b7424c-7ccf-4b50-98ca-1ad40bbdc0ed">
+        
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Contact ID</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="innerfooter">
+           <h2 class="footerh2">About Us</h2>
+           <p class="para">Welcome to our stock price prediction project!
+                We are a dedicated team passionate about leveraging machine learning to forecast stock market trends. 
+                With expertise in data analysis and predictive modeling, we aim to empower investors with accurate insights for informed decision-making.</p>
+       
+               <div class="icons">
+   
+   
+                   <i class="fa fa-facebook"></i>
+                   <i class="fa fa-instagram"></i>
+                   <!-- <i class="fa-brands fa-x-twitter"></i> -->
+                   <i class="fa fa-linkedin"></i>
+               </div>
+   
+               <h3>"Predicting Tomorrow's Opportunities, Today."</h3>
+       
+        </div>
+      
+   </div>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    
+</body>
+</html>

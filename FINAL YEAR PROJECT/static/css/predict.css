@@ -1,0 +1,80 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.graph{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto; /* To prevent collapsing of the .graph container */
+}
+
+
+.formdata {
+    width: 50%;
+    margin: auto;
+    max-width: 400px; /* Match the max-width from your .container */
+    background-color: #fff;
+    border: 2px solid #3498db;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formdata h2 {
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 20px;
+    margin-top: 5%;
+}
+
+.formdata label {
+    margin-top: 10px;
+    color: #3498db;
+}
+
+.formdata input,
+.formdata textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formdata .submitbutton {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.formdata .submitbutton:hover {
+    background-color: #2974a5; 
+    cursor: pointer;
+}
+
+
+#predictions{
+    font-size: large;
+    color: #2974a5;
+    border: 2px solid #2974a5 ;
+    border-radius: 10px;
+    padding-left:  20px ;
+}
+
+.maingraph{
+    margin: auto;
+    width: 80%;
+}

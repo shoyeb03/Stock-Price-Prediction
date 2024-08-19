@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia2JSZmioCiffRK5rQm-OF-jQ9TQoVj-W1CGp_4Pr31SmXJt_YwqYHW1-3hUIXrhEXRS1TR_AnKviy5MHDCQz7b4CmUmHFTOoHwnqPXwu8wAcwibaJCXx8raEkPM055Mqz00puXIpjFEo-OD8CJ-x5liaYrjgnp3BvQm99bHb2kmnybzVZdQ9OYHW5zXA/s320/stock.png"  sizes="16x16">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header_footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <h1 class="title">STOCK   PRICE   PREDICTION</h1>
+
+    <div>
+        <nav>
+            <ul>    
+                <a href="/">Home</a>
+                <a href="/train">Training</a>
+                <a href="/predict">Predictions</a>
+                <a href="/team">Team</a>
+                <a href="/contact_us">Contact Us</a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="maingraph">
+        <iframe src="/static/plots/Close.html" style="width: 100%" frameborder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+15) +'px';"></iframe>                     <!--Required-->
+     </div>                                                                                                                                                                                    <!--Required-->
+     <div class="graph">                                                                                                                                                                       <!--Required-->
+        <iframe src="/static/plots/lstm_plot.html" style="width: 50%; float: left;" frameborder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+15) +'px';"></iframe>    <!--Required-->
+        <iframe src="/static/plots/linear_plot.html" style="width: 50%; float: left;" frameborder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+15) +'px';"></iframe>  <!--Required-->
+     </div> 
+
+   
+     <div  class="formdata">
+        <form action="/predict" method="post">
+            <label for="open_price">Open Price:</label>
+            <input type="number" id="open_price" name="open_price" step="any" required><br>
+            <br>
+            <label for="high_price">High Price:</label>
+            <input type="number" id="high_price" name="high_price" step="any" required><br>
+            <br>
+            <label for="low_price">Low Price:</label>
+            <input type="number" id="low_price" name="low_price" step="any" required><br>
+            <br>
+            <label for="volume">Volume:</label>
+            <input type="number" id="volume" name="volume" step="any" required><br>
+            <br>
+            <input class="submitbutton" type="submit" value="Predict Next Day's Price">
+         </form>
+    
+            <div id="predictions">                                                                 <!--Required-->
+                <p>LSTM Prediction : {{ lstm_prediction }}</p>                                       <!--Required-->
+                <p>Linear Regression Prediction : {{ regression_prediction }}</p>
+                <p>LSTM Accuracy: {{ acc1 }}%</p>
+                <p>Linear Regression Accuracy: {{ acc2 }}%</p>                    <!--Required-->
+            </div> 
+     </div>
+
+
+     <div class="footer">
+        <div class="innerfooter">
+           <h2 class="footerh2">About Us</h2>
+           <p class="para">Welcome to our stock price prediction project!
+                We are a dedicated team passionate about leveraging machine learning to forecast stock market trends. 
+                With expertise in data analysis and predictive modeling, we aim to empower investors with accurate insights for informed decision-making.</p>
+       
+               <div class="icons">
+   
+   
+                   <i class="fa fa-facebook"></i>
+                   <i class="fa fa-instagram"></i>
+                   <!-- <i class="fa-brands fa-x-twitter"></i> -->
+                   <i class="fa fa-linkedin"></i>
+               </div>
+   
+               <h3>"Predicting Tomorrow's Opportunities, Today."</h3>
+       
+        </div>
+      
+   </div>
+    
+</body>
+</html>
